@@ -1,6 +1,8 @@
+'use client'
 import React from 'react';
 import styles from './page.module.css'
 import {GreetingClient} from "../src/components/client/atoms/Greeting";
+import {PrimaryButton} from "../src/components/client/atoms/PrimaryButton";
 
 export default function Home() {
 
@@ -11,6 +13,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js 13!</a>
         </h1>
         <GreetingClient/>
+        <PrimaryButton text={'submit'} onClick={() => alert('hello!')}/>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>app/page.tsx</code>
