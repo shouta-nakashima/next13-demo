@@ -1,0 +1,1 @@
+export {default as GreetingClient} from './Greeting'

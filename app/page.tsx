@@ -1,14 +1,16 @@
-import Image from 'next/image'
+import React from 'react';
 import styles from './page.module.css'
+import {GreetingClient} from "../src/components/client/atoms/Greeting";
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js 13!</a>
         </h1>
-
+        <GreetingClient/>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>app/page.tsx</code>
@@ -27,7 +29,6 @@ export default function Home() {
             <h2>Examples &rarr;</h2>
             <p>Explore the Next.js 13 playground.</p>
           </a>
-
           <a
             href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -38,20 +39,8 @@ export default function Home() {
             <p>Deploy your Next.js site to a public URL with Vercel.</p>
           </a>
         </div>
+        
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
